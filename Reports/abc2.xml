@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="96.072" tests="7" skipped="0" failures="3" errors="0">
+<testcase classname="Test OrangeHRM Application" name="Validate LoginPage Functionality" time="26.391">
+<system-out><![CDATA[
+Given user is on LoginPage..................................................passed
+When user enter a valid UserName and PassWord and click the Login button....passed
+Then user is on  HomePage and validate the HomePageTitle....................passed
+And validate HomePage URL...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test OrangeHRM Application" name="Validate PIM Page Functionality" time="3.92">
+<system-out><![CDATA[
+When user is on PIM Page....................................................passed
+Then validate PIM Page URL..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test OrangeHRM Application" name=" - Example #1.1" time="20.179">
+<system-out><![CDATA[
+When user click on Add Employee.............................................passed
+And user enter valid "Sonali", "Subhash" , "Khalate" and click on Save button.passed
+And user capture the EmployeeId.............................................passed
+And user click on Add EmployeeList..........................................passed
+And user enter the EmployeeId and click on Search Button....................passed
+And user select searched EmployeeId and click on delete.....................passed
+Then validate confirm delete window and click on yes deleted................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test OrangeHRM Application" name=" - Example #1.2" time="19.87">
+<system-out><![CDATA[
+When user click on Add Employee.............................................passed
+And user enter valid "Shivanya", "Subhash" , "Khalate" and click on Save button.passed
+And user capture the EmployeeId.............................................passed
+And user click on Add EmployeeList..........................................passed
+And user enter the EmployeeId and click on Search Button....................passed
+And user select searched EmployeeId and click on delete.....................passed
+Then validate confirm delete window and click on yes deleted................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test OrangeHRM Application" name=" - Example #1.3" time="25.414">
+<failure type="org.openqa.selenium.WebDriverException" message="disconnected: received Inspector.detached event
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
+  (Session info: MicrosoftEdge=120.0.2210.91)
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2f23a0f7e4da353d2b616531d02131cf, findElement {using=xpath, value=//button[text()=' Save ']}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 120.0.2210.91, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53722}, msedge: {msedgedriverVersion: 120.0.2210.91 (f469d579f138..., userDataDir: C:\Users\khala\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53722/devtoo..., se:cdpVersion: 120.0.2210.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2f23a0f7e4da353d2b616531d02131cf">
+<![CDATA[org.openqa.selenium.WebDriverException: disconnected: received Inspector.detached event
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
+  (Session info: MicrosoftEdge=120.0.2210.91)
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2f23a0f7e4da353d2b616531d02131cf, findElement {using=xpath, value=//button[text()=' Save ']}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 120.0.2210.91, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53722}, msedge: {msedgedriverVersion: 120.0.2210.91 (f469d579f138..., userDataDir: C:\Users\khala\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53722/devtoo..., se:cdpVersion: 120.0.2210.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2f23a0f7e4da353d2b616531d02131cf
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at StepDefinationLayer.Steps.user_enter_valid_and_click_on_save_button(Steps.java:85)
+	at ✽.user enter valid "Nikhil", "Subhash" , "Khalate" and click on Save button(file:///C:/Users/khala/BDD%20WORKSPACE/OrangeHrm/AllFeaturesFile/OrangeHRM.feature:15)
+]]>
+</failure>
+<system-out><![CDATA[
+When user click on Add Employee.............................................passed
+And user enter valid "Nikhil", "Subhash" , "Khalate" and click on Save button.failed
+And user capture the EmployeeId.............................................skipped
+And user click on Add EmployeeList..........................................skipped
+And user enter the EmployeeId and click on Search Button....................skipped
+And user select searched EmployeeId and click on delete.....................skipped
+Then validate confirm delete window and click on yes deleted................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Test OrangeHRM Application" name=" - Example #1.4" time="0.045">
+<failure type="org.openqa.selenium.NoSuchWindowException" message="no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=120.0.2210.91)
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2f23a0f7e4da353d2b616531d02131cf, findElement {using=xpath, value=//a[text()='Add Employee']}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 120.0.2210.91, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53722}, msedge: {msedgedriverVersion: 120.0.2210.91 (f469d579f138..., userDataDir: C:\Users\khala\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53722/devtoo..., se:cdpVersion: 120.0.2210.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2f23a0f7e4da353d2b616531d02131cf">
+<![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=120.0.2210.91)
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2f23a0f7e4da353d2b616531d02131cf, findElement {using=xpath, value=//a[text()='Add Employee']}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 120.0.2210.91, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53722}, msedge: {msedgedriverVersion: 120.0.2210.91 (f469d579f138..., userDataDir: C:\Users\khala\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53722/devtoo..., se:cdpVersion: 120.0.2210.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2f23a0f7e4da353d2b616531d02131cf
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at StepDefinationLayer.Steps.user_click_on_add_employee(Steps.java:72)
+	at ✽.user click on Add Employee(file:///C:/Users/khala/BDD%20WORKSPACE/OrangeHrm/AllFeaturesFile/OrangeHRM.feature:14)
+]]>
+</failure>
+<system-out><![CDATA[
+When user click on Add Employee.............................................failed
+And user enter valid "Sushant", "Shekhar" , "Bhosale" and click on Save button.skipped
+And user capture the EmployeeId.............................................skipped
+And user click on Add EmployeeList..........................................skipped
+And user enter the EmployeeId and click on Search Button....................skipped
+And user select searched EmployeeId and click on delete.....................skipped
+Then validate confirm delete window and click on yes deleted................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Test OrangeHRM Application" name="Validate Logout Functionality" time="0.006">
+<failure type="org.openqa.selenium.NoSuchWindowException" message="no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=120.0.2210.91)
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2f23a0f7e4da353d2b616531d02131cf, findElement {using=xpath, value=//p[@class='oxd-userdropdown-name']}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 120.0.2210.91, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53722}, msedge: {msedgedriverVersion: 120.0.2210.91 (f469d579f138..., userDataDir: C:\Users\khala\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53722/devtoo..., se:cdpVersion: 120.0.2210.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2f23a0f7e4da353d2b616531d02131cf">
+<![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=120.0.2210.91)
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2f23a0f7e4da353d2b616531d02131cf, findElement {using=xpath, value=//p[@class='oxd-userdropdown-name']}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 120.0.2210.91, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53722}, msedge: {msedgedriverVersion: 120.0.2210.91 (f469d579f138..., userDataDir: C:\Users\khala\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53722/devtoo..., se:cdpVersion: 120.0.2210.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2f23a0f7e4da353d2b616531d02131cf
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at StepDefinationLayer.Steps.user_click_on_profile_image(Steps.java:143)
+	at ✽.user click on Profile image(file:///C:/Users/khala/BDD%20WORKSPACE/OrangeHrm/AllFeaturesFile/OrangeHRM.feature:30)
+]]>
+</failure>
+<system-out><![CDATA[
+When user click on Profile image............................................failed
+When user click on Logout button............................................skipped
+]]></system-out>
+</testcase>
+</testsuite>

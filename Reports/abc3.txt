@@ -1,0 +1,134 @@
+
+Scenario: Validate LoginPage Functionality                                 # AllFeaturesFile/OrangeHRM.feature:3
+  Given user is on LoginPage                                               # StepDefinationLayer.Steps.user_is_on_login_page()
+  When user enter a valid UserName and PassWord and click the Login button # StepDefinationLayer.Steps.user_enter_a_valid_user_name_and_pass_word_and_click_the_login_button()
+  Then user is on  HomePage and validate the HomePageTitle                 # StepDefinationLayer.Steps.user_is_on_home_page_and_validate_the_home_page_title()
+  And validate HomePage URL                                                # StepDefinationLayer.Steps.validate_home_page_url()
+
+Scenario: Validate PIM Page Functionality # AllFeaturesFile/OrangeHRM.feature:9
+  When user is on PIM Page                # StepDefinationLayer.Steps.user_is_on_pim_page()
+  Then validate PIM Page URL              # StepDefinationLayer.Steps.validate_pim_page_url()
+
+Scenario Outline:                                                               # AllFeaturesFile/OrangeHRM.feature:24
+  When user click on Add Employee                                               # StepDefinationLayer.Steps.user_click_on_add_employee()
+  And user enter valid "Sonali", "Subhash" , "Khalate" and click on Save button # StepDefinationLayer.Steps.user_enter_valid_and_click_on_save_button(java.lang.String,java.lang.String,java.lang.String)
+  And user capture the EmployeeId                                               # StepDefinationLayer.Steps.user_capture_the_employee_id()
+  And user click on Add EmployeeList                                            # StepDefinationLayer.Steps.user_click_on_add_employee_list()
+  And user enter the EmployeeId and click on Search Button                      # StepDefinationLayer.Steps.user_enter_the_employee_id_and_click_on_search_button()
+  And user select searched EmployeeId and click on delete                       # StepDefinationLayer.Steps.user_select_searched_employee_id_and_click_on_delete()
+  Then validate confirm delete window and click on yes deleted                  # StepDefinationLayer.Steps.validate_confirm_delete_window_and_click_on_yes_deleted()
+
+Scenario Outline:                                                                 # AllFeaturesFile/OrangeHRM.feature:25
+  When user click on Add Employee                                                 # StepDefinationLayer.Steps.user_click_on_add_employee()
+  And user enter valid "Shivanya", "Subhash" , "Khalate" and click on Save button # StepDefinationLayer.Steps.user_enter_valid_and_click_on_save_button(java.lang.String,java.lang.String,java.lang.String)
+  And user capture the EmployeeId                                                 # StepDefinationLayer.Steps.user_capture_the_employee_id()
+  And user click on Add EmployeeList                                              # StepDefinationLayer.Steps.user_click_on_add_employee_list()
+  And user enter the EmployeeId and click on Search Button                        # StepDefinationLayer.Steps.user_enter_the_employee_id_and_click_on_search_button()
+  And user select searched EmployeeId and click on delete                         # StepDefinationLayer.Steps.user_select_searched_employee_id_and_click_on_delete()
+  Then validate confirm delete window and click on yes deleted                    # StepDefinationLayer.Steps.validate_confirm_delete_window_and_click_on_yes_deleted()
+
+Scenario Outline:                                                               # AllFeaturesFile/OrangeHRM.feature:26
+  When user click on Add Employee                                               # StepDefinationLayer.Steps.user_click_on_add_employee()
+  And user enter valid "Nikhil", "Subhash" , "Khalate" and click on Save button # StepDefinationLayer.Steps.user_enter_valid_and_click_on_save_button(java.lang.String,java.lang.String,java.lang.String)
+      org.openqa.selenium.WebDriverException: disconnected: received Inspector.detached event
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
+  (Session info: MicrosoftEdge=120.0.2210.91)
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2f23a0f7e4da353d2b616531d02131cf, findElement {using=xpath, value=//button[text()=' Save ']}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 120.0.2210.91, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53722}, msedge: {msedgedriverVersion: 120.0.2210.91 (f469d579f138..., userDataDir: C:\Users\khala\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53722/devtoo..., se:cdpVersion: 120.0.2210.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2f23a0f7e4da353d2b616531d02131cf
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at StepDefinationLayer.Steps.user_enter_valid_and_click_on_save_button(Steps.java:85)
+	at ✽.user enter valid "Nikhil", "Subhash" , "Khalate" and click on Save button(file:///C:/Users/khala/BDD%20WORKSPACE/OrangeHrm/AllFeaturesFile/OrangeHRM.feature:15)
+
+  And user capture the EmployeeId                                               # StepDefinationLayer.Steps.user_capture_the_employee_id()
+  And user click on Add EmployeeList                                            # StepDefinationLayer.Steps.user_click_on_add_employee_list()
+  And user enter the EmployeeId and click on Search Button                      # StepDefinationLayer.Steps.user_enter_the_employee_id_and_click_on_search_button()
+  And user select searched EmployeeId and click on delete                       # StepDefinationLayer.Steps.user_select_searched_employee_id_and_click_on_delete()
+  Then validate confirm delete window and click on yes deleted                  # StepDefinationLayer.Steps.validate_confirm_delete_window_and_click_on_yes_deleted()
+
+Scenario Outline:                                                                # AllFeaturesFile/OrangeHRM.feature:27
+  When user click on Add Employee                                                # StepDefinationLayer.Steps.user_click_on_add_employee()
+      org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=120.0.2210.91)
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2f23a0f7e4da353d2b616531d02131cf, findElement {using=xpath, value=//a[text()='Add Employee']}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 120.0.2210.91, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53722}, msedge: {msedgedriverVersion: 120.0.2210.91 (f469d579f138..., userDataDir: C:\Users\khala\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53722/devtoo..., se:cdpVersion: 120.0.2210.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2f23a0f7e4da353d2b616531d02131cf
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at StepDefinationLayer.Steps.user_click_on_add_employee(Steps.java:72)
+	at ✽.user click on Add Employee(file:///C:/Users/khala/BDD%20WORKSPACE/OrangeHrm/AllFeaturesFile/OrangeHRM.feature:14)
+
+  And user enter valid "Sushant", "Shekhar" , "Bhosale" and click on Save button # StepDefinationLayer.Steps.user_enter_valid_and_click_on_save_button(java.lang.String,java.lang.String,java.lang.String)
+  And user capture the EmployeeId                                                # StepDefinationLayer.Steps.user_capture_the_employee_id()
+  And user click on Add EmployeeList                                             # StepDefinationLayer.Steps.user_click_on_add_employee_list()
+  And user enter the EmployeeId and click on Search Button                       # StepDefinationLayer.Steps.user_enter_the_employee_id_and_click_on_search_button()
+  And user select searched EmployeeId and click on delete                        # StepDefinationLayer.Steps.user_select_searched_employee_id_and_click_on_delete()
+  Then validate confirm delete window and click on yes deleted                   # StepDefinationLayer.Steps.validate_confirm_delete_window_and_click_on_yes_deleted()
+
+Scenario: Validate Logout Functionality # AllFeaturesFile/OrangeHRM.feature:29
+  When user click on Profile image      # StepDefinationLayer.Steps.user_click_on_profile_image()
+      org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=120.0.2210.91)
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2f23a0f7e4da353d2b616531d02131cf, findElement {using=xpath, value=//p[@class='oxd-userdropdown-name']}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 120.0.2210.91, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53722}, msedge: {msedgedriverVersion: 120.0.2210.91 (f469d579f138..., userDataDir: C:\Users\khala\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53722/devtoo..., se:cdpVersion: 120.0.2210.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2f23a0f7e4da353d2b616531d02131cf
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at StepDefinationLayer.Steps.user_click_on_profile_image(Steps.java:143)
+	at ✽.user click on Profile image(file:///C:/Users/khala/BDD%20WORKSPACE/OrangeHrm/AllFeaturesFile/OrangeHRM.feature:30)
+
+  When user click on Logout button      # StepDefinationLayer.Steps.user_click_on_logout_button()
