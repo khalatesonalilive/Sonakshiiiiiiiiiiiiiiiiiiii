@@ -30,7 +30,7 @@ public class LoginPage extends BaseClass {
 	//create associated methods for each and every Object repository without entering the test data
 	public void loginPageFunctionality(String Uname,String Pass)
 	{
-		
+		System.out.println("New Code for Github as a formality was added and only syso statement");
 		Wait.sendKeys(uname, Uname);
 		Wait.sendKeys(pass, Pass);
 		Wait.click(loginbutton);
