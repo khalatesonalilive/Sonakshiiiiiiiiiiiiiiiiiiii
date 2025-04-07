@@ -31,6 +31,7 @@ public class LoginPage extends BaseClass {
 	public void loginPageFunctionality(String Uname,String Pass)
 	{
 		System.out.println("New Code for Github as a formality was added and only syso statement");
+		System.out.println("New Code for Github as a formality was added and only syso2 statement");
 		Wait.sendKeys(uname, Uname);
 		Wait.sendKeys(pass, Pass);
 		Wait.click(loginbutton);
